@@ -11,9 +11,9 @@
 
 ## Kết quả tóm tắt (điền cuối bài; số lấy từ `submission/qc/*`, kèm mẫu số)
 
-- Máy: accepted / edited / deleted: 398/401 = 99.3% / 3/401 = 0.7% / 0/401 = 0.0% (mẫu số: 401 box máy); added: 2/403 = 0.5% (mẫu số: 403 đối tượng)
-- So với gold: precision / recall của **máy** 88.9% (56/63) / 91.8% (56/61)
-- Bắt bẫy: 11/12 = 91.7%
+- Máy: accepted / edited / deleted: 339/401 = 84.5% / 34/401 = 8.5% / 28/401 = 7.0% (mẫu số: 401 box máy); added: 134/507 = 26.4% (mẫu số: 507 đối tượng)
+- So với gold: precision / recall của **máy** 87.3% (55/63) / 71.4% (55/77)
+- Bắt bẫy: 12/12 = 100.0%
 - Thời gian: gán tay 5.5 phút/ảnh; duyệt có pre-label 3.0 phút/ảnh
 - Lỗi QC: 0.0% theo ảnh (0/6), 0.0% theo đối tượng (0/90)
-- **Quyết định:** Release — lý do một dòng: Tỉ lệ ảnh lỗi 0.0% <= 2%, bắt bẫy đạt 91.7% >= 80%, không có lỗi hệ thống, guideline v1.1 đã chốt đầy đủ.
+- **Quyết định:** Release — lý do một dòng: Tỉ lệ ảnh lỗi 0.0% <= 2%, bắt bẫy đạt 100.0% >= 80%, không có lỗi hệ thống, guideline v1.1 đã chốt đầy đủ.

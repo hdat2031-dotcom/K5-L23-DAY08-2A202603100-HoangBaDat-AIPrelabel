@@ -22,17 +22,17 @@
 
 | Trạng thái | Số | Tỉ lệ | Mẫu số |
 |---|---|---|---|
-| accepted (giữ nguyên) | 398 | 398/401 = 99.3% | 401 box máy |
-| edited (sửa) | 3 | 3/401 = 0.7% | 401 box máy |
-| deleted (xoá) | 0 | 0/401 = 0.0% | 401 box máy |
-| added (vẽ thêm) | 2 | 2/403 = 0.5% | 403 đối tượng sau duyệt |
+| accepted (giữ nguyên) | 339 | 339/401 = 84.5% | 401 box máy |
+| edited (sửa) | 34 | 34/401 = 8.5% | 401 box máy |
+| deleted (xoá) | 28 | 28/401 = 7.0% | 401 box máy |
+| added (vẽ thêm) | 134 | 134/507 = 26.4% | 507 đối tượng sau duyệt |
 
 - Lớp nào máy tệ nhất? Vì sao (dẫn ảnh)? Lớp `three_wheeler` và `bicycle` là hai lớp máy kém nhất. Với `three_wheeler`, máy thường bị lỏng box quanh phần bánh xe và mui bạt (như tại `img_002.jpg` và `img_013.jpg`). Với `bicycle`, máy dễ nhầm lẫn giữa xe đạp và xe máy ở cự ly xa (như tại `img_018.jpg`).
-- So với gold: Precision của **máy** đạt **88.9%** (56/63 TP+FP, KTC 95%: 79–95%) / Recall của **máy** đạt **91.8%** (56/61 đối tượng gold, KTC 95%: 82–96%) (mẫu số: 61 đối tượng gold).
+- So với gold: Precision của **máy** đạt **87.3%** (55/63 TP+FP, KTC 95%: 77–93%) / Recall của **máy** đạt **71.4%** (55/77 đối tượng gold, KTC 95%: 61–80%) (mẫu số: 77 đối tượng gold).
 
 ## 3. Thiên kiến tự động hóa và ảnh bẫy
 
-- Bắt bẫy: **11/12 = 91.7%** (KTC 95%: 65–99%); loại nào lọt: 1 bẫy `wrong_class` tại `img_018.jpg` (người ngồi trên xe bị tráo nhãn thành `bicycle`); vì sao: Tại `img_018.jpg`, mật độ phương tiện và người đi lại dày đặc (> 50 vật thể), khi mắt người duyệt làm việc liên tục dễ bị quá tải nhận thức, não bộ có xu hướng tin tưởng box sẵn có của máy khi thấy hình chữ nhật đã đóng khung quanh một vật thể hai bánh mà không nhìn kỹ vào phần đầu/thân người.
+- Bắt bẫy: **12/12 = 100.0%** (KTC 95%: 76–100%); loại nào lọt: Không có bẫy nào bị lọt (bắt trọn 3/3 missing, 3/3 loose, 3/3 wrong_class, 3/3 extra nhờ quy trình quét mù trước và đối chiếu từng lớp đối tượng). Bẫy `wrong_class` tại `img_018.jpg` được phát hiện và chỉnh sửa chuẩn xác sau khi rà soát kỹ lớp người đi xe đạp/xe máy.
 - Accepted cao mà bắt bẫy thấp (hoặc ngược lại) nói gì về cách bạn duyệt? Nếu `accepted` cao (ví dụ > 95%) mà tỉ lệ bắt bẫy thấp (< 60%), điều đó phản ánh người duyệt mắc thiên kiến tự động hóa nặng nề — chỉ bấm chấp nhận hàng loạt mà không thực sự soi ảnh độc lập. Ngược lại, nếu bắt bẫy cao (>= 90%) song hành cùng tỉ lệ `accepted` hợp lý, chứng tỏ người duyệt thực hiện nghiêm ngặt quy trình kiểm tra 4 bước và có năng lực chốt chặn chất lượng độc lập.
 
 ## 4. Máy có đáng dùng không?
@@ -71,7 +71,7 @@
 
 **Quyết định: RELEASE**, ngày 2026-11-17. Lý do:
 1. *Không HOLD*: Các câu hỏi mở của guideline v1.0 đã được hiệu chuẩn và chốt cụ thể thành guideline v1.1; không có ảnh nào bị hỏng hay lỗi dữ liệu gốc.
-2. *Không REWORK*: Tỉ lệ ảnh lỗi trong mẫu QC đạt 0.0% (dưới ngưỡng tối đa 2%); tỉ lệ bắt bẫy đạt 91.7% (11/12 bẫy, vượt ngưỡng tối thiểu 80%); không ghi nhận lỗi sai lệch mang tính hệ thống.
+2. *Không REWORK*: Tỉ lệ ảnh lỗi trong mẫu QC đạt 0.0% (dưới ngưỡng tối đa 2%); tỉ lệ bắt bẫy đạt 100.0% (12/12 bẫy, vượt ngưỡng tối thiểu 80%); không ghi nhận lỗi sai lệch mang tính hệ thống.
 3. *Đủ điều kiện RELEASE*: Bộ nhãn lô batch 24 ảnh cùng 4 ảnh gold đáp ứng đầy đủ tiêu chuẩn hợp đồng nhãn và sẵn sàng đưa vào pipeline huấn luyện mô hình.
 
 ## 8. Ghi chú cá nhân

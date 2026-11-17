@@ -2,53 +2,67 @@
  "mode": "det",
  "images": 24,
  "pre_boxes": 401,
- "final_objects": 403,
- "accepted": 398,
- "edited": 3,
- "deleted": 0,
- "added": 2,
- "class_changed_info": 0,
- "accepted_rate": 0.9925187032418953,
- "edited_rate": 0.007481296758104738,
- "deleted_rate": 0.0,
- "added_rate": 0.004962779156327543,
+ "final_objects": 507,
+ "accepted": 339,
+ "edited": 34,
+ "deleted": 28,
+ "added": 134,
+ "class_changed_info": 7,
+ "accepted_rate": 0.8453865336658354,
+ "edited_rate": 0.08478802992518704,
+ "deleted_rate": 0.06982543640897755,
+ "added_rate": 0.26429980276134124,
  "per_class": {
-  "three_wheeler": {
-   "accepted": 23,
-   "edited": 1
-  },
   "person": {
-   "accepted": 229,
-   "added": 1
+   "accepted": 215,
+   "edited": 11,
+   "deleted": 3,
+   "added": 29
   },
   "motorbike": {
-   "accepted": 90,
-   "added": 1
+   "accepted": 71,
+   "edited": 13,
+   "added": 58,
+   "deleted": 6
   },
   "truck": {
-   "accepted": 7
+   "accepted": 5,
+   "added": 6,
+   "deleted": 2
   },
   "bicycle": {
-   "accepted": 8,
+   "accepted": 5,
+   "added": 8,
+   "deleted": 3,
    "edited": 1
   },
+  "three_wheeler": {
+   "edited": 8,
+   "deleted": 12,
+   "accepted": 4,
+   "added": 7
+  },
   "car": {
-   "accepted": 38,
+   "added": 24,
+   "accepted": 37,
+   "deleted": 1,
    "edited": 1
   },
   "bus": {
-   "accepted": 3
+   "added": 2,
+   "accepted": 2,
+   "deleted": 1
   }
  },
  "gold": {
   "images": 4,
-  "gold_objects": 61,
+  "gold_objects": 77,
   "pre": {
-   "tp": 56,
-   "fp": 7,
-   "fn": 5,
-   "precision": 0.8888888888888888,
-   "recall": 0.9180327868852459
+   "tp": 55,
+   "fp": 8,
+   "fn": 22,
+   "precision": 0.873015873015873,
+   "recall": 0.7142857142857143
   },
   "final": null,
   "residual_errors": null,
@@ -56,8 +70,8 @@
  },
  "traps": {
   "n": 12,
-  "caught": 11,
-  "rate": 0.9166666666666666,
+  "caught": 12,
+  "rate": 1.0,
   "by_type": {
    "missing": [
     3,
@@ -68,7 +82,7 @@
     3
    ],
    "wrong_class": [
-    2,
+    3,
     3
    ],
    "extra": [
@@ -76,12 +90,7 @@
     3
    ]
   },
-  "missed": [
-   [
-    "img_018.jpg",
-    "wrong_class"
-   ]
-  ]
+  "missed": []
  },
  "accept_threshold": 0.9
 }
