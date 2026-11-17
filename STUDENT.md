@@ -5,7 +5,7 @@
 - Lớp (L2 / L3 / khác): L2
 - Tài khoản GitHub: hdat2031-dotcom
 - Repo bài nộp (URL): https://github.com/hdat2031-dotcom/K5-L23-DAY08-2A202603100-HoangBaDat-AIPrelabel
-- Commit chốt bài (hash): e2e9a5d
+- Commit chốt bài (hash): 42b7eab
 - Máy: Windows 11, NVIDIA GeForce (CUDA / CPU), 4GB VRAM
 - CVAT (Docker): v2.83.1
 
